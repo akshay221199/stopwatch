@@ -14,8 +14,8 @@ document.getElementById('start')?.addEventListener('click', function start() {
     if (!running) {
         running = true;
         timer = setInterval(() => {
-                elapsedTime++
-                document.getElementById('time')?.textContent = formatTime(elapsedTime);
+            elapsedTime++;
+            document.getElementById('time')?.textContent = formatTime(elapsedTime);
         }, 1000);
     }
 });
