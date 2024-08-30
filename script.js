@@ -10,24 +10,24 @@ function formatTime(time) {
     return `${hours}:${minutes}:${seconds}`;
 }
 
-document.getElementById('start')?.addEventListener('click', function start() {
+document.getElementById('start').addEventListener('click', function start() {
     if (!running) {
         running = true;
         timer = setInterval(() => {
             elapsedTime++;
-            document.getElementById('time')?.textContent = formatTime(elapsedTime);
+            document.getElementById('time').textContent = formatTime(elapsedTime);
         }, 1000);
     }
 });
 
-document.getElementById('reset')?.addEventListener('click', function reset() {
+document.getElementById('reset').addEventListener('click', function reset() {
     running = false;
     clearInterval(timer);
     elapsedTime = 0;
-    document.getElementById('time')?.textContent = formatTime(elapsedTime);
+    document.getElementById('time').textContent = formatTime(elapsedTime);
 });
 
-document.getElementById('stop')?.addEventListener('click', function stop() {
+document.getElementById('stop').addEventListener('click', function stop() {
     console.log('stop');
     running = false;
     clearInterval(timer);
